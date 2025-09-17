@@ -1,0 +1,12 @@
+---
+- name: Create a new user
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Add user 'gnanendra'
+      ansible.builtin.user:
+        name: gnanendra
+        shell: /bin/bash
+        groups: "sudo"
+        state: present
+
